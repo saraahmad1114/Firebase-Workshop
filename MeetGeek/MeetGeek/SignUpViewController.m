@@ -4,10 +4,11 @@
 //
 //  Created by Julianne on 10/15/16.
 //  Copyright © 2016 Julianne Goyena. All rights reserved.
-//
 
 #import "SignUpViewController.h"
 #import "Event.h"
+#import "Attendee.h"
+#import "FirebaseManager.h"
 
 @interface SignUpViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *image;
@@ -42,13 +43,12 @@
 }
 - (IBAction)signUpButtonClicked:(id)sender {
     
-//    Attendee *attendee = [[Attendee alloc] initWithEvent:self.event name:self.nameTextField.text age:self.ageTextField.text sex:self.sexTextField.text];
-//    
-//    if (self.commentTextField.text.length > 0)
-//    {
-//        attendee.comment = self.commentTextField.text;
-//    }
-    
+    Attendee *attendee = [[Attendee alloc] initWithEvent:self.event name:self.nameTextField.text age:self.ageTextField.text sex:self.sexTextField.text];
+    if (self.commentTextField.text.length > 0)
+    {
+        attendee.comment = self.commentTextField.text;
+    }
+    [[FirebaseManager sharedManager]postAttendee:attendee];
     
 }
 

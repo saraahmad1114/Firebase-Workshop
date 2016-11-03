@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BE8DE7B1DCAB5440038A78C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BE8DE7A1DCAB5440038A78C /* GoogleService-Info.plist */; };
 		C85C0AAF6CD2568789EE63CC /* libPods-MeetGeek.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 131F47CA4FD8EA3CDBA83AE6 /* libPods-MeetGeek.a */; };
 		DAB5496C1DB2762A00722A49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB5496B1DB2762A00722A49 /* main.m */; };
 		DAB5496F1DB2762A00722A49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB5496E1DB2762A00722A49 /* AppDelegate.m */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		131F47CA4FD8EA3CDBA83AE6 /* libPods-MeetGeek.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeetGeek.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE8DE7A1DCAB5440038A78C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCC0996C91E30A201BC1F655 /* Pods-MeetGeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetGeek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetGeek/Pods-MeetGeek.debug.xcconfig"; sourceTree = "<group>"; };
 		DAB549671DB2762A00722A49 /* MeetGeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetGeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5496B1DB2762A00722A49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		DAC1E5031DC4F6BF00A99F6F /* Starter Files */ = {
 			isa = PBXGroup;
 			children = (
+				1BE8DE7A1DCAB5440038A78C /* GoogleService-Info.plist */,
 				DAB549731DB2762A00722A49 /* Main.storyboard */,
 				DAB549701DB2762A00722A49 /* ViewController.h */,
 				DAB549711DB2762A00722A49 /* ViewController.m */,
@@ -229,6 +232,7 @@
 			files = (
 				DAC1E50D1DC4FC5900A99F6F /* User.png in Resources */,
 				DAB5498E1DB2BDD500722A49 /* curtains.jpg in Resources */,
+				1BE8DE7B1DCAB5440038A78C /* GoogleService-Info.plist in Resources */,
 				DACBDEC01DBD918D00C80333 /* seatgeeklogo.jpg in Resources */,
 				DAB5497A1DB2762A00722A49 /* LaunchScreen.storyboard in Resources */,
 				DACBDEC21DBDA21400C80333 /* Calendar.png in Resources */,
@@ -425,6 +429,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MeetGeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JulianneGoyena.MeetGeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,6 +445,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MeetGeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JulianneGoyena.MeetGeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";

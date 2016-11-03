@@ -8,6 +8,7 @@
 
 #import "AttendeeTableViewController.h"
 #import "Attendee.h"
+#import "FirebaseManager.h"
 
 @implementation AttendeeTableViewController
 
@@ -16,6 +17,11 @@ static NSString *const reuseIdentifier = @"AttendeeCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[FirebaseManager sharedManager] setDelegate:self];
+}
+
+- (void)reloadRequests {
+    [self.tableView reloadData]; 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,7 +38,7 @@ static NSString *const reuseIdentifier = @"AttendeeCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     // Want to change to number of attendees
-    return 10;
+    return [self attendees].count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -49,10 +55,14 @@ static NSString *const reuseIdentifier = @"AttendeeCell";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     }
     
-//    Attendee *attendee = [self attendees][indexPath.row];
-//    cell.textLabel.text = attendee.event.name;
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@ %@ \"%@\"", attendee.name, attendee.age, attendee.sex, attendee.comment];
+    Attendee *attendee = [self attendees][indexPath.row];
+    cell.textLabel.text = attendee.event.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@ %@ \"%@\"", attendee.name, attendee.age, attendee.sex, attendee.comment];
     return cell;
+}
+
+-(NSArray <Attendee *> *) attendees {
+    return [[[FirebaseManager sharedManager]attendees] copy];
 }
 
 @end

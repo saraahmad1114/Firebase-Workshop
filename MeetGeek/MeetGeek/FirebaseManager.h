@@ -7,8 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Attendee.h"
+
+@protocol FirebaseManagerDelegate <NSObject>
+
+- (void)reloadRequests;
+
+@end
 
 @interface FirebaseManager : NSObject
 
+@property (nonatomic, weak) id <FirebaseManagerDelegate> delegate;
+@property (strong, nonatomic) NSMutableArray<Attendee*> *attendees;
 
++ (id)sharedManager; 
+- (void)postAttendee:(Attendee*)attendee; 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Attendee.h"
 
 @class Event;
 
